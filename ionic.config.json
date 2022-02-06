@@ -1,0 +1,7 @@
+{
+  "name": "MAPD_722_A1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
