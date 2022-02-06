@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  
+  <!-- Inputs with labels -->
+  <ion-item>
+    <ion-label>Number of hours worked:</ion-label>
+    <ion-input  [(ngModel)]="no_of_hours"  ></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Hourly rate:</ion-label>
+    <ion-input [(ngModel)]="hourly_rate"></ion-input>
+  </ion-item>
+  
+  <ion-button (click)="calculatePay(this.no_of_hours, this.hourly_rate)" color="secondary">
+    Calculate
+    <ion-icon name="add-circle" slot="start"></ion-icon>
+  </ion-button>
+  
+  <div>
+    <strong>
+      Regular pay: {{regular_pay}}
+    </strong>
+  </div>
+  
+  <div>
+    <strong>
+      Overtime pay: {{overtime_pay}}
+    </strong>
+  </div>
+  
+  <div>
+    <strong>
+      Total pay: {{total_pay}}
+    </strong>
+  </div>
+  
+  <div>
+    <strong>
+      Tax: {{tax}}
+    </strong>
+  </div>
+  
+  
+  
+  
+  </ion-content>
+  
